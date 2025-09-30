@@ -19,4 +19,14 @@ class Board(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_sn", nullable = false)
     val member: Member,
-)
+) {
+    companion object {
+        fun create(member: Member, title: String, content: String): Board {
+            return Board(
+                title = title,
+                content = content,
+                member = member,
+            )
+        }
+    }
+}

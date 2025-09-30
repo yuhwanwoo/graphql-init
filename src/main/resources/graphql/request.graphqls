@@ -1,0 +1,4 @@
+input MemberCreateRequest {
+    name: String
+    email: String!
+}

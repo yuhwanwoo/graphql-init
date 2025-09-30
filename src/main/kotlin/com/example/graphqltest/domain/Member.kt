@@ -12,13 +12,13 @@ class Member (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var sn: Long? = null,
     var name: String,
-    val email: String,
+    val email: String?,
     @OneToMany(mappedBy = "member")
     val boards: MutableList<Board> = mutableListOf(),
 ) {
     companion object {
         fun create(
-            name: String, email: String, boards: MutableList<Board>
+            name: String, email: String?
         ): Member {
             return Member(
                 name = name,

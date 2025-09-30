@@ -1,0 +1,17 @@
+type MemberResponse {
+    sn: ID!
+    name: String!
+}
+type MemberDetailResponse {
+    sn: ID!
+    name: String!
+    email: String!
+    boards: [BoardResponse]
+}
+
+type BoardResponse {
+    sn: ID!
+    title: String!
+    content: String!
+}
+
