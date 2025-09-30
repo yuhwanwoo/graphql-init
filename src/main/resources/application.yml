@@ -12,3 +12,7 @@ spring:
     username: sa
     password:
     url: jdbc:h2:mem:graphqltest
+  graphql:
+    graphiql:
+      path: /graphiql
+      enabled: true
